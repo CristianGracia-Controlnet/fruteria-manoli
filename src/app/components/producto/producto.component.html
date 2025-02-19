@@ -1,0 +1,7 @@
+@if (frutaEncontrada) {
+    <h1>{{fruta.nombre}}</h1>
+    <p>Precio: {{fruta.precio}}€</p>
+    <button (click)="toggleFavorito()">{{fruta.favorita ? "❤️" : "🤍"}}</button>
+}@else{
+    <h1>La fruta no ha sido encontrada</h1>
+}
