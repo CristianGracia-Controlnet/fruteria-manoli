@@ -1,10 +1,10 @@
 <h2>Carrito</h2>
 
-@if (carrito.length === 0) {
+@if (getCarrito().length === 0) {
     <p>Tu carrito está vacío</p>
 }@else{
     <ul>
-        @for (producto of carrito; track producto.fruta.id) {
+        @for (producto of getCarrito(); track producto.fruta.id) {
           <li>{{producto.fruta.nombre}} - {{producto.cantidad}} unidad/es
             {{producto.fruta.precio * producto.cantidad}}€
             <button (click)="eliminarDelCarrito(producto.fruta.id)">Eliminar</button>

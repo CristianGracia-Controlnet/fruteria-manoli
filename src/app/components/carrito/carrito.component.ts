@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Producto } from '../../interfaces/carrito.interface';
 import { CarritoService } from '../../services/carrito/carrito.service';
 
 @Component({
@@ -11,6 +10,23 @@ import { CarritoService } from '../../services/carrito/carrito.service';
 })
 export class CarritoComponent {
 
+  constructor(
+    private carritoService : CarritoService
+  ){}
+
+  getCarrito(){
+    return this.carritoService.getCarrito()
+  }
+
+  eliminarDelCarrito(id : number){
+    this.carritoService.eliminarDelCarrito(id)
+  }
+
+  vaciarCarrito(){
+    this.carritoService.vaciarCarrito();
+  }
+
+  /*
   carrito : Producto[] = []
 
   
@@ -27,7 +43,5 @@ export class CarritoComponent {
   vaciarCarrito(){
     this.carritoService.vaciarCarrito();
   }
-
-
-
+*/
 }
