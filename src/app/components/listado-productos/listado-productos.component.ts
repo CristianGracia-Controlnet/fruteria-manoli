@@ -13,7 +13,7 @@ import { DetalleProductoComponent } from "./components/detalle-producto/detalle-
 export class ListadoProductosComponent {
   frutas: Fruta[] = [];
   mostrarFavoritos : boolean = false;
-
+  
   constructor(private frutasService : FrutasService){
     this.frutas = this.frutasService.getFrutas();
   }

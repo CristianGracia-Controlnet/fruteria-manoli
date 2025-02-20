@@ -17,7 +17,7 @@ export class CarritoComponent {
   constructor(
     private carritoService : CarritoService
   ){
-    this.carrito == this.carritoService.getCarrito()
+    this.carrito == this.carritoService.getCarrito();
   }
 
   eliminarDelCarrito(id : number){
@@ -28,6 +28,6 @@ export class CarritoComponent {
     this.carritoService.vaciarCarrito();
   }
 
-  
+
 
 }

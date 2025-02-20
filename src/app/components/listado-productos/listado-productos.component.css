@@ -1,0 +1,36 @@
+.div-toggle{
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+}
+
+
+.div-toggle > button{
+    padding: 1em;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    cursor: pointer;
+}
+
+.separator{
+    margin-top: 1em;
+    display: block;
+    height: 1px;
+    width: 90vw;
+    background-color: black;
+}
+
+main{
+    display: flex;
+}
+
+.producto{
+    display: block;
+    background-color: rgb(255, 102, 0);
+    margin: 1em;
+    padding: 5px 1em 1em 1em;
+    border: 1px solid black;
+    position: relative;
+    width: 200px;
+    height: 100px;
+}

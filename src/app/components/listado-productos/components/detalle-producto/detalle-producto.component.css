@@ -1,0 +1,17 @@
+a{
+    color: white;
+}
+
+.favorito-button{
+    width: 50%;
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+}
+
+.carrito-button{
+    width: 50%;
+    position: absolute;
+    left: 3px;
+    bottom: 3px;
+}

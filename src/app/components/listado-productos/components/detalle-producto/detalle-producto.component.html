@@ -1,9 +1,9 @@
-<li>
-    <a routerLink="/producto/{{fruta.id}}">
-        {{fruta.nombre}} - {{fruta.precio}}€
-    </a>
-    <button (click)="toggleFavorito(fruta.id)">
-        {{fruta.favorita ? "Quitar de favoritos" : "Añadir a favoritos"}}
-    </button>
-    <button (click)="agregarAlCarrito()">Agregar al carrito</button>
-</li>
+
+            <a routerLink="/producto/{{fruta.id}}">
+                {{fruta.nombre}}
+            </a>
+            <button (click)="toggleFavorito(fruta.id)" class="favorito-button">
+                {{fruta.favorita ? "Quitar de favoritos" : "Añadir a favoritos"}}
+            </button>
+            <button (click)="agregarAlCarrito()" class="carrito-button">Agregar al carrito</button>
+

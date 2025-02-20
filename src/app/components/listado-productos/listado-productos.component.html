@@ -1,10 +1,17 @@
-<button (click)="toggleMostrarFavoritos()">{{mostrarFavoritos ? 
-"Mostrar todas las frutas" 
-: "Mostrar frutas favoritas"}}
-</button>
+<div class="div-toggle">
+    <button (click)="toggleMostrarFavoritos()">{{mostrarFavoritos ? 
+        "Mostrar todas las frutas" 
+        : "Mostrar frutas favoritas"}}
+    </button>
+    <span class="separator"></span>
+</div>
 
-<ul>
-    @for (f of frutasFitradas; track f.id) {
-        <component-detalle-producto [fruta]="f" (frutaFavorita)="toggleFavorito($event)"/>
-    }
-</ul>
+<main>
+
+        @for (f of frutasFitradas; track f.id) {
+            <div class="producto">
+                <component-detalle-producto [fruta]="f" (frutaFavorita)="toggleFavorito($event)"/>
+            </div>  
+        }
+
+</main>
