@@ -15,3 +15,8 @@ a{
 body{
     background-color: rgb(181, 181, 181);
 }
+
+button{
+    cursor: pointer;
+    border: none;
+}
