@@ -1,16 +1,20 @@
-<h2>Carrito</h2>
+<div class="titulo">
+  <h2>Carrito</h2>
+</div>
+
 
 @if (getCarrito().length === 0) {
-    <p>Tu carrito está vacío</p>
+    <p class="vacio">Tu carrito está vacío</p>
 }@else{
-    <ul>
+    <main>
         @for (producto of getCarrito(); track producto.fruta.id) {
-          <li>{{producto.fruta.nombre}} - {{producto.cantidad}} unidad/es
-            {{producto.fruta.precio * producto.cantidad}}€
+          <div class="producto">
+            <p>{{producto.fruta.nombre}} - {{producto.cantidad}} unidad/es</p>
+            <p>Total: {{producto.fruta.precio * producto.cantidad}}€</p>
             <button (click)="eliminarDelCarrito(producto.fruta.id)">Eliminar</button>
-          </li>
+        </div>
         }
-    </ul>
+    </main>
 
-    <button (click)="vaciarCarrito()"></button>
+    <button (click)="vaciarCarrito()" class="vaciar">Vaciar carrito</button>
 }
